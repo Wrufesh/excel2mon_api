@@ -70,7 +70,7 @@ class GetDataFromExcel(object):
         if len(dic) == 0:
             return False
         else:
-            collection.insert_one(dic)
+            collection.insert(dic)
             return True
 
     def write_from_input(self, db, collection_name):
@@ -88,6 +88,6 @@ class GetDataFromExcel(object):
         if len(dic) < len(fields):
             return False
         else:
-            collection.insert_one(dic)
+            collection.insert(dic)
             return True
 
